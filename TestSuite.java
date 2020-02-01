@@ -41,6 +41,10 @@ public abstract class TestSuite {
         expect(Objects.deepEquals(actual, expected), "EXPECTED " + expected + " BUT GOT " + actual);
     }
 
+    void expectMatch(String string, String pattern) {
+        expect(string.matches(pattern), string + " DOES NOT MATCH " + pattern);
+    }
+
     void expectThrows(Runnable code, Class<?> expectedClass, String expectedMessage) {
         System.out.print(" should throw " + expectedClass.getSimpleName());
         try {
