@@ -1,10 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A dice set holds a collection of Die objects. All of the die objects have the
- * same number of sides.
- */
 public class DiceSet {
 
     private Die[] dice;
@@ -76,10 +72,6 @@ public class DiceSet {
         return true;
     }
 
-    /**
-     * Returns a string representation in which each of the die strings are
-     * joined without a separator, for example: "[2][5][2][3]".
-     */
     @Override public String toString() {
         var connect = "";
         for (var d: this.dice){
